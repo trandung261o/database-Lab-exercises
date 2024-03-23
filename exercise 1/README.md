@@ -3,7 +3,7 @@
 cho cơ sở dữ liệu gồm các quan hệ sau
     
     GiangVien:
-    GV#	HoTen			DiaChi			NgaySinh
+    MaGV	HoTen			DiaChi			NgaySinh
     GV01	Vũ Tuyết Trinh		Hoàng Mai, Hà nội	10/10/1975
     GV02	Nguyễn Nhật Quang	Hai Bà Trưng, Hà Nội	03/11/1976
     GV03	Trần Đức Khánh		Đống Đa, Hà Nội		04/06/1977
@@ -11,7 +11,7 @@ cho cơ sở dữ liệu gồm các quan hệ sau
     GV05	Lê Thanh Hương		Hai Bà Trưng, Hà Nội	10/10/1976
     
     DeTai:
-    DT#	TenDT			Cap		KinhPhi
+    MaDT	TenDT			Cap		KinhPhi
     DT01	Tính Toán Lưới		Nhà Nước	700
     DT02	Phát hiện tri thức	Bộ		300
     DT03	Phân loại văn bản	Bộ		270
