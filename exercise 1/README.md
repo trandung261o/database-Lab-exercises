@@ -1,7 +1,6 @@
 cho cơ sở dữ liệu gồm các quan hệ sau
     
     GiangVien:
-    
     GV#	HoTen			DiaChi			NgaySinh
     GV01	Vũ Tuyết Trinh		Hoàng Mai, Hà nội	10/10/1975
     GV02	Nguyễn Nhật Quang	Hai Bà Trưng, Hà Nội	03/11/1976
@@ -10,15 +9,13 @@ cho cơ sở dữ liệu gồm các quan hệ sau
     GV05	Lê Thanh Hương		Hai Bà Trưng, Hà Nội	10/10/1976
     
     DeTai:
-    
     DT#	TenDT			Cap		KinhPhi
     DT01	Tính Toán Lưới		Nhà Nước	700
     DT02	Phát hiện tri thức	Bộ		300
     DT03	Phân loại văn bản	Bộ		270
     DT04	Dịch tự động Anh Việt	Trường		30
     
-    ThamGia:
-        
+    ThamGia:       
     GV#	DT#	SoGio
     GV01	DT01	100
     GV01	DT02	80
@@ -29,6 +26,7 @@ cho cơ sở dữ liệu gồm các quan hệ sau
     GV04	DT04	180
     
 Yêu cầu:
+
 A. Tạo CSDL có tên là QLKH, tạo các bảng trên và nhập dữ liệu như trên. Chú ý: Hai thuộc tính GV# và DT# 
 trong bảng ThamGia tham chiếu đến thuộc tính cùng tên trong bảng GiangVien và bảng DeTai
 
