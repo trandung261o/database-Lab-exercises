@@ -1,3 +1,5 @@
+(DBMS: microsoft sql server management studio)
+
 cho cơ sở dữ liệu gồm các quan hệ sau
     
     GiangVien:
