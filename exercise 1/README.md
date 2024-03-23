@@ -46,7 +46,8 @@
      10. giảng viên Ngô Tuấn Phong sinh ngày 8/9/1986 địa chỉ Đống Đa, Hà Nội mới tham gia nghiên cứu đề tài khoa học. 
      hãy thêm thông tin giảng viên này vào bảng GiangVien
      11. Giảng viên Vũ Tuyết Trinh mới chuyển về sống tại quận Tây Hồ, Hà Nội. hãy cập nhật thông tin này
-     12. giảng viên có mã GV02 không tham gia bất kỳ đề tài nào nữa. Hãy xóa tất cả thông tin liên quan đến giảng viên này trong CSDL
+     12. giảng viên có mã GV02 không tham gia bất kỳ đề tài nào nữa. 
+     Hãy xóa tất cả thông tin liên quan đến giảng viên này trong CSDL
     
     
     
