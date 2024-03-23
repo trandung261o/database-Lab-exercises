@@ -18,7 +18,7 @@ cho cơ sở dữ liệu gồm các quan hệ sau
     DT04	Dịch tự động Anh Việt	Trường		30
     
     ThamGia:       
-    GV#	DT#	SoGio
+    MaGV	MaDT	SoGio
     GV01	DT01	100
     GV01	DT02	80
     GV01	DT03	80
