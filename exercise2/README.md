@@ -28,7 +28,7 @@ cho các quan hệ sau:
 3) Đưa ra {sid} của các Supplier cung cấp mặt hàng P1 hoặc P2
 4) Đưa ra {sname} của các Supplier cung cấp mặt hàng P3
 5) Đưa ra {sname} của các hãng cung ứng ít nhất một mặt hàng màu đỏ
-6) Đưa ra {sid} của các hãng cung ứng tất cả các mặt hàng màu đỏ
+6) Đưa ra {sname} của các hãng cung ứng tất cả các mặt hàng màu đỏ
 7) Đưa ra {sname} của các hãng có cung ứng mặt hàng màu đỏ hoặc màu xanh
 8) Đưa ra {sname} của các hãng cung ứng ít nhất một mặt hàng màu đỏ và ít nhất một mặt hàng màu xanh
 9) Đưa ra {sid} của các hãng không cung ứng mặt hàng nào
