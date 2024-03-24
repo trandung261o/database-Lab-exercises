@@ -23,6 +23,7 @@ cho các quan hệ sau:
     S3	P4	100
     S2	P3	155
 
+BIỂU DIỄN CÁC TRUY VẤN SAU BẰNG BIỂU THỨC ĐẠI SỐ QUAN HỆ
 1) Đưa ra {sid,sname,size,city} của các Supplier có trụ sở tại London
 2) Đưa ra {pname} của tất cả các mặt hàng
 3) Đưa ra {sid} của các Supplier cung cấp mặt hàng P1 hoặc P2
