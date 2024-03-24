@@ -1,5 +1,28 @@
 cho cơ sở dữ liệu gồm các quan hệ sau
+GiangVien:
+MaGV	HoTen			DiaChi			NgaySinh
+GV01	Vũ Tuyết Trinh		Hoàng Mai, Hà nội	10/10/1975
+GV02	Nguyễn Nhật Quang	Hai Bà Trưng, Hà Nội	03/11/1976
+GV03	Trần Đức Khánh		Đống Đa, Hà Nội		04/06/1977
+GV04	Nguyễn Hồng Phương	Tây Hồ, Hà Nội		10/12/1983
+GV05	Lê Thanh Hương		Hai Bà Trưng, Hà Nội	10/10/1976
 
+DeTai:
+MaDT	TenDT			Cap		KinhPhi
+DT01	Tính Toán Lưới		Nhà Nước	700
+DT02	Phát hiện tri thức	Bộ		300
+DT03	Phân loại văn bản	Bộ		270
+DT04	Dịch tự động Anh Việt	Trường		30
+
+ThamGia:       
+MaGV	MaDT	SoGio
+GV01	DT01	100
+GV01	DT02	80
+GV01	DT03	80
+GV02	DT01	120
+GV02	DT03	140
+GV03	DT03	150
+GV04	DT04	180
 Yêu cầu:
 
 A. Tạo CSDL có tên là QLKH, tạo các bảng trên và nhập dữ liệu như trên. Chú ý: Hai thuộc tính MaGV và MaDT 
