@@ -23,13 +23,14 @@ cho các quan hệ sau:
     S3	P4	100
     S2	P3	155
 
-BIỂU DIỄN CÁC TRUY VẤN SAU BẰNG BIỂU THỨC ĐẠI SỐ QUAN HỆ
-1) Đưa ra {sid,sname,size,city} của các Supplier có trụ sở tại London
-2) Đưa ra {pname} của tất cả các mặt hàng
-3) Đưa ra {sid} của các Supplier cung cấp mặt hàng P1 hoặc P2
-4) Đưa ra {sname} của các Supplier cung cấp mặt hàng P3
-5) Đưa ra {sname} của các hãng cung ứng ít nhất một mặt hàng màu đỏ
-6) Đưa ra {sid} của các hãng cung ứng tất cả các mặt hàng màu đỏ
-7) Đưa ra {sname} của các hãng có cung ứng mặt hàng màu đỏ hoặc màu xanh
-8) Đưa ra {sname} của các hãng cung ứng ít nhất một mặt hàng màu đỏ và ít nhất một mặt hàng màu xanh
-9) Đưa ra {sid} của các hãng không cung ứng mặt hàng nào
+REPRESENT THE FOLLOWING QUERIES USING RELATIONAL ALGEBRA EXPRESSIONS:
+
+1. Retrieve {sid, sname, size, city} of Suppliers located in London.
+2. Retrieve {pname} of all products.
+3. Retrieve {sid} of Suppliers supplying either product P1 or P2.
+4. Retrieve {sname} of Suppliers supplying product P3.
+5. Retrieve {sname} of Suppliers supplying at least one red-colored product.
+6. Retrieve {sid} of Suppliers supplying all red-colored products.
+7. Retrieve {sname} of Suppliers supplying products in red or green color.
+8. Retrieve {sname} of Suppliers supplying at least one red-colored product and at least one green-colored product.
+9. Retrieve {sid} of Suppliers not supplying any product.
