@@ -29,7 +29,7 @@ cho cơ sở dữ liệu gồm các quan hệ sau
     
 Yêu cầu:
 
-A. Tạo CSDL có tên là QLKH, tạo các bảng trên và nhập dữ liệu như trên. Chú ý: Hai thuộc tính GV# và DT# 
+A. Tạo CSDL có tên là QLKH, tạo các bảng trên và nhập dữ liệu như trên. Chú ý: Hai thuộc tính MaGV và MaDT 
 trong bảng ThamGia tham chiếu đến thuộc tính cùng tên trong bảng GiangVien và bảng DeTai
 
 B. Hãy viết các câu lệnh SQL để:
@@ -48,7 +48,7 @@ B. Hãy viết các câu lệnh SQL để:
  11. Giảng viên Vũ Tuyết Trinh mới chuyển về sống tại quận Tây Hồ, Hà Nội. hãy cập nhật thông tin này
  12. giảng viên có mã GV02 không tham gia bất kỳ đề tài nào nữa. 
  Hãy xóa tất cả thông tin liên quan đến giảng viên này trong CSDL
-    
+ 13. đưa ra thông tin giảng viên không tham gia đề tài nào
     
     
     
