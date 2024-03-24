@@ -1,4 +1,4 @@
-cho các quan hệ sau:
+Given the database consisting of the following relations:
 
     Supplier:
     sid	sname	size	city
