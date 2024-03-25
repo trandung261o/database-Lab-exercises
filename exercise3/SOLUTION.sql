@@ -1,3 +1,4 @@
+-- tạo bảng Company
 CREATE TABLE [Company] (
 	[CompanyID] int IDENTITY(1,1),
 	[Name] varchar(40),
@@ -8,6 +9,7 @@ CREATE TABLE [Company] (
 	PRIMARY KEY ([CompanyID])
 );
 
+-- tạo bảng Product
 CREATE TABLE [Product] (
 	[ProductID] int IDENTITY(1,1),
 	[Name] varchar(40),
@@ -16,7 +18,7 @@ CREATE TABLE [Product] (
 	PRIMARY KEY ([ProductID])
 );
 
-
+-- tạo bảng Supply
 CREATE TABLE [Supply] (
 	[CompanyID] int,
 	[ProductID] int,
@@ -26,7 +28,7 @@ CREATE TABLE [Supply] (
 	FOREIGN KEY ([ProductID]) REFERENCES [Product]([ProductID])
 );
 
---Company
+-- nhập thông tin cho bảng Company
 INSERT INTO [Company] ([Name], [NumberofEmployee], [Address], [Telephone], [EstablishmentDay]) 
 VALUES('Kia','33255', 'Seoul, Korea','123067483', '1941-12-01'),('Vinfast','3000','LongBien, Hanoi','0912354321','2017-06-20'),
 ('Chevrolet', '20000','Michigan, US', '0985647321','1911-11-03'),('Audi', '53347','Ingolstadt, Germany', '8456732102', '1909-04-25'), 
@@ -38,7 +40,7 @@ VALUES('Kia','33255', 'Seoul, Korea','123067483', '1941-12-01'),('Vinfast','3000
 ('Mercedes Benz', '12000','Baden-Wurttemberg, Germany', '09877453621','1926-06-28'),('Peugeot','11230', 'Paris, France', '067598432','1882-08-03'),
 ('Toyota', '299210', 'Tokyo, Japan','098453621','1937-08-02')
 
---Product
+-- nhập thông tin cho bảng Product
 INSERT INTO [Product]([Name],[Color],[Price])
 VALUES ('Standard MT 2019', 'brown','299'),('Standard AT 2019', 'green', '339'),
 ('Luxury 2019', 'yellow', '393'),('Deluxe 2019', 'yellow', '355'),
@@ -57,7 +59,7 @@ VALUES ('Standard MT 2019', 'brown','299'),('Standard AT 2019', 'green', '339'),
 
 
 
---Supply
+--nhập thông tin cho bảng Supply
 INSERT INTO [Supply] ([CompanyID], [ProductID], [Quantity]) 
 VALUES ('1', '1', '2029'),
 ('1', '2', '6116'), ('1', '4', '3661'), ('1', '6', '4940'),('1', '7', '6000'),('2', '1', '2815'), ('2', '2', '5218'),('2', '7', '2482'),('3', '9', '755'),('3', '10', '5352'), 
