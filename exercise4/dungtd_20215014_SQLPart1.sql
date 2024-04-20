@@ -84,3 +84,19 @@ SELECT student.student_id, last_name || ' ' || first_name AS name, midterm_score
 FROM subject, student, enrollment
 WHERE subject.subject_id = enrollment.subject_id AND student.student_id = enrollment.student_id
 AND subject.name = 'Cơ sở dữ liệu' AND enrollment.semester = '20172';
+
+
+--9.Display IDs of students who failed the subject with code 'IT1110' in semester '20171'. Note: a 
+--student failed a subject if his midterm score or his final exam score is below 3 ; or his subject 
+--score is below 4.
+SELECT student.student_id FROM student, enrollment, subject
+WHERE student.student_id = enrollment.student_id AND enrollment.subject_id = subject.subject_id
+AND enrollment.subject_id = 'IT1110' AND enrollment.semester = '20171'
+AND midterm_score < 3 OR final_score < 3 
+OR (midterm_score * (100 - percentage_final_exam)/100 + (final_score * percentage_final_exam/100)) < 3
+
+--10. List of all students with their class name, monitor name
+SELECT student.first_name, clazz.name, monitor.first_name AS monitor_first_name
+FROM student JOIN clazz ON student.clazz_id = clazz.clazz_id
+	JOIN student AS monitor
+	ON clazz.monitor_id = monitor.student_id;
