@@ -73,3 +73,14 @@ SELECT * FROM subject WHERE subject_id NOT IN
 SELECT name, credit FROM subject WHERE subject_id IN 
 	(SELECT subject_id FROM enrollment WHERE semester = '20171' AND student_id IN
 		(SELECT student_id FROM student WHERE first_name = 'Hoài An' AND last_name = 'Nguyễn'));
+
+--8. show the list of students who enrolled in 'Cơ sở dữ liệu' in semester 20172. this list 
+--contains student id, student name, midterm score, final exam score and subject score. Subject 
+--score is calculated by the weighted average of midterm score and final exam score : subject 
+--score = midterm score * (1- percentage_final_exam/100) + final score 
+--*percentage_final_exam/100.
+SELECT student.student_id, last_name || ' ' || first_name AS name, midterm_score, final_score, 
+(midterm_score * (100 - percentage_final_exam)/100 + (final_score * percentage_final_exam/100)) AS subject_score
+FROM subject, student, enrollment
+WHERE subject.subject_id = enrollment.subject_id AND student.student_id = enrollment.student_id
+AND subject.name = 'Cơ sở dữ liệu' AND enrollment.semester = '20172';
