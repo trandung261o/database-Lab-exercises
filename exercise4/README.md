@@ -1,5 +1,5 @@
 1. List of subjects having 5 or more credits.
-2. List of students in the class named "CNTT 2 K58".
+2. List of students in the class named "CNTT1.01-K61".
 3. List of students in classes whose name contains "CNTT"
 4. Display a list of students who have enrolled in both "Cơ sở dữ liệu" and 
 "Tin học đại cương" 
