@@ -1,4 +1,4 @@
-	--11. Students aged 25 and above. Given information: student name, age
+--11. Students aged 25 and above. Given information: student name, age
 SELECT last_name || ' ' || first_name AS student_name, EXTRACT('year' FROM age(dob)) AS age 
 FROM student 
 WHERE EXTRACT('year' FROM age(dob)) >= 25;
