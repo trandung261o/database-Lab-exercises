@@ -16,3 +16,15 @@ score = midterm score * (1- percentage_final_exam/100) + final score
 student failed a subject if his midterm score or his final exam score is below 3 ; or his subject 
 score is below 4.
 10. List of all students with their class name, monitor name
+11. Students aged 25 and above. Given information: student name, age
+12. Students were born in June 1999.
+13. Display class name and number of students corresponding in each class. Sort the result 
+in descending order by the number of students.
+14. Display the lowest, highest and average scores on the mid-term test of "Mạng máy tính" 
+in semester '20172'.
+15. Give number of subjects that each lecturer can teach. List must contain: lecturer id, 
+lecturer's fullname, number of subjects.
+16. List of subjects which have at least 2 lecturers in charge.
+17. List of subjects which have less than 2 lecturers in charge.
+18. List of students who obtained the highest score in subject whose id is 'IT3080', in the 
+semester '20172'.
