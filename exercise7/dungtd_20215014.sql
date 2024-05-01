@@ -10,3 +10,9 @@ group by book.publisher;
 select Borrower.borrower_id, name, telephone_number, address 
 from Borrower join borrowcard using (borrower_id) 
 where actual_return_date is NULL;
+
+--6. (1 đ) Liệt kê tất cả bạn đọc (id, name, telephone number, address) trả sách muộn, sắp xếp theo thứ tự alphabet của tên.
+select borrower.borrower_id, name, telephone_number, address
+from Borrower join borrowcard using (borrower_id)
+where actual_return_date > expected_return_date
+order by name;
