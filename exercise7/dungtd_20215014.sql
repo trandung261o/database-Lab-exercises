@@ -6,6 +6,14 @@ where published_year = 2020 and publisher = 'Wiley';
 select book.publisher, sum(total_number_of_copies) as total from book
 group by book.publisher;
 
+--4. (1 đ) Liệt kê top 5 cuốn sách (ID, title) “hottest” trong năm 2020 (top 5 cuốn sách được mượn nhiều nhất trong năm 2020)
+select book.book_id, book.title
+from borrowcarditem join book using (book_id) join borrowcard using (card_id) 
+where extract(year from borrow_date) = 2020
+group by book.book_id, book.title
+order by count(*) desc
+limit 5;
+
 --5. (1 đ) Liệt kê tất cả bạn đọc (id, name, telephone number, address) chưa trả sách.
 select Borrower.borrower_id, name, telephone_number, address 
 from Borrower join borrowcard using (borrower_id) 
