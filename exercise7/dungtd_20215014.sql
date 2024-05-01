@@ -20,3 +20,16 @@ order by name;
 --7. (1 đ) Xóa những cuốn sách không có ai mượn
 delete from book
 where book.book_id not in (select book_id from borrowCardItem);
+
+--9. (1 đ) Liệt kê các bạn đọc (id, name) mượn sách của cả nhà xuất bản Wiley và nhà xuất bản Addison-Wesle
+select distinct borrower.borrower_id, borrower.name 
+from borrower join borrowcard using (borrower_id)
+			  join borrowcarditem using (card_id)
+			  join book using (book_id)
+where book.publisher = 'Wiley'
+	INTERSECT
+select distinct borrower.borrower_id, borrower.name 
+from borrower join borrowcard using (borrower_id)
+			  join borrowcarditem using (card_id)
+			  join book using (book_id)
+where book.publisher = 'Addison-Wesle';
