@@ -29,6 +29,16 @@ order by name;
 delete from book
 where book.book_id not in (select book_id from borrowCardItem);
 
+--8. (1 đ) Thêm 10 copies cho 5 cuốn sách được mượn nhiều nhất của nhà xuất bản Wiley
+update book
+set total_number_of_copies = total_number_of_copies + 10,
+	current_number_of_copies = current_number_of_copies + 10
+where book_id in (
+	select book_id from book where publisher = 'Wiley'
+	order by current_number_of_copies desc
+	limit 5
+);
+
 --9. (1 đ) Liệt kê các bạn đọc (id, name) mượn sách của cả nhà xuất bản Wiley và nhà xuất bản Addison-Wesle
 select distinct borrower.borrower_id, borrower.name 
 from borrower join borrowcard using (borrower_id)
