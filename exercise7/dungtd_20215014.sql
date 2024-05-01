@@ -16,3 +16,7 @@ select borrower.borrower_id, name, telephone_number, address
 from Borrower join borrowcard using (borrower_id)
 where actual_return_date > expected_return_date
 order by name;
+
+--7. (1 đ) Xóa những cuốn sách không có ai mượn
+delete from book
+where book.book_id not in (select book_id from borrowCardItem);
