@@ -1,3 +1,39 @@
+--1. (2 đ) Tạo các bảng trong cơ sở dữ liệu. Cần đảm bảo các ràng buộc trong cơ sở dữ liệu được thỏa mãn. satisfied.
+CREATE TABLE Book (
+	book_id char(10) PRIMARY KEY,
+	title char(50) NOT NULL,
+	publisher char(20) NOT NULL,
+	published_year integer CHECK(published_year > 1900),
+	total_number_of_copies integer CHECK(total_number_of_copies >= 0),
+	current_number_of_copies integer CHECK(current_number_of_copies >= 0),
+	CHECK(total_number_of_copies >= current_number_of_copies)
+);
+
+CREATE TABLE Borrower(
+	borrower_id char(10) PRIMARY KEY,
+	name char(50) NOT NULL,
+	address text,
+	telephone_number char(12)
+);
+
+CREATE TABLE BorrowCard(
+	card_id serial PRIMARY KEY,
+	borrower_id char(10),
+	borrow_date date NOT NULL,
+	expected_return_date date NOT NULL,
+	actual_return_date date,
+	FOREIGN KEY (borrower_id) REFERENCES Borrower(borrower_id)
+);
+
+CREATE TABLE BorrowCardItem (
+	card_id int,
+	book_id char(10),
+	number_of_copies int,
+	PRIMARY KEY(card_id, book_id),
+	FOREIGN KEY (card_id) REFERENCES BorrowCard(card_id),
+	FOREIGN KEY (book_id) REFERENCES Book(book_id)
+);
+
 --2. (1 đ) Liệt kê các cuốn sách xuất bản trong năm 2020 bởi nhà xuất bản Wiley.
 select * from book
 where published_year = 2020 and publisher = 'Wiley';
