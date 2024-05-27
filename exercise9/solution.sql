@@ -48,7 +48,12 @@ create view sub_customer as
 	where c.city = 'Hammond';
 
 select * from sub_customer;
+select * from store.customer;
 
 --cập nhật view sub_customer
 update sub_customer set lastname = 'Frank'
 where customerid = 'WIL001';
+
+--
+insert into sub_customer values ('AA001', 'Oanh', 'Nguyen');
+delete from sub_customer where customerid = 'AA001';
