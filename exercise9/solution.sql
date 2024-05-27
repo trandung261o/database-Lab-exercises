@@ -28,3 +28,27 @@ create table store.order (
 	foreign key (customerid) references store.customer(customerid),
 	foreign key (productid) references store.product(productid)
 )
+
+--tạo view customer_order
+create view customer_order as
+	select c.firstname, c.lastname, p.productid, p.productname, o.quantity
+	from store.customer c, store.order o, store.product p
+	where c.customerid = o.customerid and o.productid = p.productid;
+
+--hiển thị toàn bộ thông tin view customer_order
+select * from customer_order;
+
+--chèn thông tin vào view customer_order (lỗi)
+insert into customer_order values('Nam', 'Vu', 'LAP002', 'HP AZE', 5);
+
+--tạo view chỉ làm việc trên 1 bảng (có thể cập nhật được)
+create view sub_customer as
+	select c.customerid, c.firstname, c.lastname
+	from store.customer c
+	where c.city = 'Hammond';
+
+select * from sub_customer;
+
+--cập nhật view sub_customer
+update sub_customer set lastname = 'Frank'
+where customerid = 'WIL001';
