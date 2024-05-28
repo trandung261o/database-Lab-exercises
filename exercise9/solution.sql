@@ -29,6 +29,7 @@ create table store.order (
 	foreign key (productid) references store.product(productid)
 )
 
+------------------------------------VIEW---------------------------------------------
 --tạo view customer_order
 create view customer_order as
 	select c.firstname, c.lastname, p.productid, p.productname, o.quantity
@@ -57,3 +58,22 @@ where customerid = 'WIL001';
 --
 insert into sub_customer values ('AA001', 'Oanh', 'Nguyen');
 delete from sub_customer where customerid = 'AA001';
+
+----------------------------------------FUNCTION----------------------------------------
+CREATE OR REPLACE FUNCTION store.test(IN val1 int4, IN val2 int4, OUT result int4) AS
+$$ DECLARE vmultiplier int4 := 3;
+BEGIN
+	result := val1 * vmultiplier + val2;
+END; $$
+LANGUAGE plpgsql
+IMMUTABLE
+RETURNS NULL ON NULL INPUT
+SECURITY INVOKER;
+
+SELECT store.test(2, 5);
+
+SELECT store.test(NULL, 5);
+
+GRANT USAGE ON SCHEMA store TO joe;
+
+GRANT EXECUTE ON FUNCTION store.test TO joe;
