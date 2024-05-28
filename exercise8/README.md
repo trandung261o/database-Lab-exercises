@@ -3,9 +3,9 @@ Dùng các mệnh đề SQL để làm các bài tập sau
 
    1.1. hiển thị toàn bộ bản ghi của view này.
 
-   1.2. thử insert/update/delete 1 bản ghi trong student_shortinfos
+   1.2. thử insert/update/delete 1 bản ghi vào trong student_shortinfos
 
-   -> kiểm tra xem bản ghi này có được insert/update/delete trong bảng student không?
+   -> kiểm tra xem bản ghi này có được insert/update/delete vào trong bảng student không?
 
    1.3. giả sử bạn không có quyền truy cập bảng student, nhưng bạn được truy cập view student_shortinfos và bảng clazz, viết mệnh đề SQL để hiển thị
 
