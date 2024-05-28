@@ -1,0 +1,4 @@
+"productid","productname","model","manufacturer","unitprice","inventory"
+"LAP001","Vaio CR31Z","CR","Sony Vaio","$1.30",5
+"LAP002","HP AZE","HP",NULL,"$1.00",18
+"LAP003","HP 34","HP","HP","$1,000.00",200
