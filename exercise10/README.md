@@ -1,4 +1,5 @@
-Định nghĩa một hàm
+Trong eduDB
+
 1. cho một classID, viết một hàm tên là "number_of_students" dùng để tính toán số sinh viên trong lớp này
 - thử gọi hàm này bằng tài khoản superuser
 - tạo một tài khoản tên là: joe, mk: 12345678
