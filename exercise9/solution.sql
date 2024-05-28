@@ -77,3 +77,20 @@ SELECT store.test(NULL, 5);
 GRANT USAGE ON SCHEMA store TO joe;
 
 GRANT EXECUTE ON FUNCTION store.test TO joe;
+
+--
+CREATE OR REPLACE FUNCTION store.extended_sales(p_itemno char(6)) 
+RETURNS TABLE(quantity int, total money) AS $$
+BEGIN
+	RETURN QUERY SELECT s.quantity, s.totalcost
+				FROM store.order AS s
+				WHERE s.productid = p_itemno;
+END;
+$$ LANGUAGE plpgsql
+IMMUTABLE
+RETURNS NULL ON NULL INPUT
+SECURITY DEFINER;
+
+SELECT * FROM store.order;
+
+SELECT store.extended_sales('LAP001');
