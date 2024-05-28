@@ -72,11 +72,8 @@ SECURITY INVOKER;
 --
 
 SELECT store.test(2, 5);
-
 SELECT store.test(NULL, 5);
-
 GRANT USAGE ON SCHEMA store TO joe;
-
 GRANT EXECUTE ON FUNCTION store.test TO joe;
 
 --
@@ -94,5 +91,4 @@ SECURITY DEFINER;
 --
 
 SELECT * FROM store.order;
-
 SELECT store.extended_sales('LAP001');
