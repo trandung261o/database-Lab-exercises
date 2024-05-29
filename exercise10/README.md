@@ -1,3 +1,5 @@
+Bài tập về FUNCTION
+
 Trong eduDB
 
 1. cho một classID, viết một hàm tên là "number_of_students" dùng để tính toán số sinh viên trong lớp này
