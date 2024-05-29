@@ -1,3 +1,5 @@
+Bài tập về VIEW
+
 Dùng các mệnh đề SQL để làm các bài tập sau
 1. Tạo một view từ eduDB, đặt tên là student_shortinfos, view này chứa vài thông tin từ bảng student: student_id, firstname, lastname, gender, dob, clazz_id.
 
