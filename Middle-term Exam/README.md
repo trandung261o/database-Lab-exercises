@@ -1,14 +1,21 @@
 Tạo CSDL  "dellstore" và import CSDL từ file sql được cung cấp (dellstore2-normal-1.0.sql) 
 
-Mở CMD:
-- psql –h localhost postgres postgres
+Mở CMD: psql [options] [databasename [username]]
 
-(psql [options] [databasename [username]])
+kết nối:
+    
+    psql –h localhost postgres postgres
+ Example: 
+
+    psql postgres postgres
+    psql test barney
+tạo database:
+
+    create database dellstore;
+    \q 
+inport dữ liệu:
   
-  o create database dellstore;
-  
-  o \q 
-- psql -d dellstore -U postgres -f [path/]dellstore2-normal-1.0.sql
+    psql -d dellstore -U postgres -f [path/]dellstore2-normal-1.0.sql
 #### Hãy viết các câu lệnh SQL cho các yêu cầu sau: 
 1. Đưa ra danh sách các sản phẩm (prod_id, title) thuộc loại (category) "Documentary". 
 2. Đưa ra danh sách các sản phẩm mà tiêu đề (title) có chứa "Apollo" (không quan trọng chữ hoa, chữ 
