@@ -9,6 +9,7 @@ kết nối:
 
     psql postgres postgres
     psql test barney
+    psql [server] u20215014
 tạo database:
 
     create database dellstore;
