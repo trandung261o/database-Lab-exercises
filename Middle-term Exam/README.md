@@ -3,7 +3,7 @@ Tạo CSDL  "dellstore" và import CSDL từ file sql được cung cấp (dells
 Mở CMD:
 - psql –h localhost postgres postgres
 
-(format: psql [options] [databasename [username]])
+(psql [options] [databasename [username]])
   
   o create database dellstore;
   
