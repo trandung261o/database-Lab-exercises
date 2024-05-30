@@ -19,6 +19,11 @@ LEFT JOIN products p ON c.category = p.category
 LEFT JOIN orderlines ol ON p.prod_id = ol.prod_id
 WHERE ol.prod_id IS NULL;
 
+--3 ver 2 --nguyen thi oanh???
+select * from categories
+where category not in(select distinct p.category
+						from orderlines as ol join products as p on ol.prod_id = p.prod_id);
+
 --4
 SELECT DISTINCT country
 FROM customers c
@@ -30,7 +35,29 @@ SELECT COUNT(*) AS number_of_customers
 FROM customers
 WHERE country = 'Germany';
 
---6
+--6--nguyen thi oanh chua
+select count(customerid) 
+	from
+	(select distinct customerid from orders) as ordersshort
+
+--ver2	
+select count(distinct customerid) 
+	from orders
+
+
+--7--nguyen thi oanh
+select country, count(distinct o.customerid), count(o.customerid)
+from customers c left join orders o on c.customerid = o.customerid
+group by c.country;
+
+
+--8--nguyen thi oanh
+select c.customerid, firstname, lastname
+from customers c, orders o, orderlines ol, products p
+where c.customerid = o.customerid and o.orderid = ol.orderid
+	and ol.prod_id = p.prod_id
+	and (title = 'AIRPORT ROBBERS' or title = 'AGENT ORDER')
+group by c.customerid having count (distinct p.title) >= 2;
 
 --9
 SELECT 
